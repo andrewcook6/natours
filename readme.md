@@ -3,6 +3,9 @@
 This project was built alongside a Node.js Udemy Course by Jonas Schmedtmann.  
 It utilizes modern technologies such as Node.js, Express, MongoDB, and Mongoose.
 
+## API
+REST API is modeled and documented in Postman: https://documenter.getpostman.com/view/18590433/2s8Z6sbGEM
+
 ## Deployment
 
 Deployment Link: https://natours-production-5991.up.railway.app/
