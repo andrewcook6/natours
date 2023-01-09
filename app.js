@@ -30,13 +30,13 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.use(cors());
-app.options('*', cors());
+app.use(cors())
+app.options('*', cors())
 
 // Set security HTTP headers
-app.use(helmet());
+app.use(helmet())
 // Further HELMET configuration for Security Policy (CSP)
-const defaultSrcUrls = ['https://js.stripe.com/'];
+const defaultSrcUrls = ['https://js.stripe.com/']
 
 const scriptSrcUrls = [
   'https://unpkg.com/',
@@ -45,7 +45,7 @@ const scriptSrcUrls = [
   'https://c.tile.openstreetmap.org',
   'https://cdnjs.cloudflare.com/',
   'https://js.stripe.com/v3/',
-];
+]
 
 const styleSrcUrls = [
   'https://unpkg.com/',
@@ -55,7 +55,7 @@ const styleSrcUrls = [
   'https://c.tile.openstreetmap.org',
   'https://cdnjs.cloudflare.com/',
   'https://fonts.googleapis.com/',
-];
+]
 
 const connectSrcUrls = [
   'https://js.stripe.com/v3/',
@@ -69,9 +69,9 @@ const connectSrcUrls = [
   'http://127.0.0.1:3000/api/v1/users/logout',
   'http://127.0.0.1/api/v1/bookings/checkout-session/',
   'ws://127.0.0.1:60747/'
-];
+]
 
-const fontSrcUrls = ['fonts.googleapis.com', 'fonts.gstatic.com'];
+const fontSrcUrls = ['fonts.googleapis.com', 'fonts.gstatic.com']
 
 app.use(
   helmet.contentSecurityPolicy({
@@ -85,7 +85,7 @@ app.use(
       workerSrc: ["'self'", 'blob:'],
     },
   })
-);
+)
 
 // Development logging
 if (process.env.NODE_ENV === 'development') {
@@ -123,14 +123,14 @@ app.use(
       'price'
     ]
   })
-);
+)
 
 app.use(compression())
 
 // Test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString()
-  next();
+  next()
 })
 
 // 3) Routes
