@@ -1,6 +1,6 @@
 # Natours Application
 
-This project was built alongside a Node.js Udemy Course by Jonas Schmedtmann.  
+This project was built alongside a Node.js Udemy Course by Jonas Schmedtmann. The frontend was included in the course materials, while I implemented the backend with the guidance of the course.  
 It utilizes modern technologies such as Node.js, Express, MongoDB, and Mongoose.
 
 ## API
